@@ -1,0 +1,19 @@
+sudo: false
+language: node_js
+node_js:
+- '12'
+matrix:
+  fast_finish: true
+  allow_failures: []
+cache: npm
+install:
+- eval "$(curl -fsSL https://raw.githubusercontent.com/bevry/awesome-travis/c91c9d5eef34ecb0e92029667fd5052640225fa3/scripts/node-install.bash)"
+before_script:
+- eval "$(curl -fsSL https://raw.githubusercontent.com/bevry/awesome-travis/c91c9d5eef34ecb0e92029667fd5052640225fa3/scripts/node-verify.bash)"
+after_success:
+- eval "$(curl -fsSL https://raw.githubusercontent.com/bevry/awesome-travis/c91c9d5eef34ecb0e92029667fd5052640225fa3/scripts/surge.bash)"
+- eval "$(curl -fsSL https://raw.githubusercontent.com/bevry/awesome-travis/c91c9d5eef34ecb0e92029667fd5052640225fa3/scripts/node-publish.bash)"
+notifications:
+  email:
+    recipients:
+      secure: Dyx7CJmyMu+54Ntq8BYGoGa04pirNqnMsUEP/sMk4aAGZVEiBIs3V0R56yYnAWow67wK1vulrKxec/mI7GQlmr1kg+4L7honlnwa3LZWMwuWcBpsJdTUO9RzumAK71Dz32rcBoVkAUa3WCeTDC/XV1Da/S6X5ElaMZjQqYTtO+WB9ShRR0Jpq1p/lXU+Rd3dt/wqI+0OfCy52pT5ipKZKxaibY0p0IX6pTd/Fo0X8sipVxB92ToIPflZx1Xd5dyocZbbszboAvqgbjOw3Xy7c1fatyG9MXSXHAZo/oMF/SVtgb6kimH9v/i5HVhLGN3oCd9V6V/dls0IU3RYoaQzi3YSjqaceEm4hC2EFKtkga7MuermTl4ZFixehWZyizyXVTxrhPnvjJPOemjiOCG/sdvPZuYVRM88avEQln21y2WXdpJEDcYEQBl1rI7+K8NT296ov3XKAp5C6ymk1DUejb9nE0vrruNAB2O5RkW/le5QWkp7zw8UextYZbJ3NRR393CC3Hf431vb6OWJo2lquRl9CGX8p2kHNqvi5tDxqQdHiucgJqh9mVYjPtf6wpvGEjd0rqoVSE1DB8WQBA5efaj8LRXLpaIXHp6rsSPBVJYosH1kv8e37UVSTyH/5+uOpj2OOzAFHUy888z+KVboBKXA04cCm93YwzAc4uJ8r2o=
