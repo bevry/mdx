@@ -40,10 +40,10 @@ export function withMDX(
 					options.defaultLoaders.babel,
 					{
 						loader: '@mdx-js/loader',
-						options: pluginOptions.options
+						options: pluginOptions.options,
 					},
-					pathUtil.join(__dirname, '..', 'loader')
-				]
+					pathUtil.join(__dirname, '..', 'loader'),
+				],
 			})
 
 			if (typeof nextConfig.webpack === 'function') {
@@ -51,13 +51,13 @@ export function withMDX(
 			}
 
 			return config
-		}
+		},
 	})
 }
 
 /* eslint prefer-rest-params:0 */
 export function loadMDX(layouts: string) {
-	return function(this: any, src: string) {
+	return function (this: any, src: string) {
 		let result = ''
 		try {
 			const callback = this.async()
@@ -73,9 +73,9 @@ export function loadMDX(layouts: string) {
 				`export const meta = ${JSON.stringify(meta, null, '  ')}`,
 				body,
 				useLayout &&
-					'export default ({ children }) => <Layout meta={meta}>{children}</Layout>'
+					'export default ({ children }) => <Layout meta={meta}>{children}</Layout>',
 			]
-				.filter(i => i)
+				.filter((i) => i)
 				.join('\n\n')
 			return callback(null, result)
 		} catch (err) {

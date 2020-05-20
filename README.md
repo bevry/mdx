@@ -33,28 +33,9 @@ MDX loader for Next.js
 <!-- /DESCRIPTION -->
 
 
-<!-- INSTALL/ -->
-
-<h2>Install</h2>
-
-<a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
-<ul>
-<li>Install: <code>npm install --save @bevry/mdx</code></li>
-<li>Require: <code>require('@bevry/mdx')</code></li>
-</ul>
-
-<h3><a href="https://editions.bevry.me" title="Editions are the best way to produce and consume packages you care about.">Editions</a></h3>
-
-<p>This package is published with the following editions:</p>
-
-<ul><li><code>@bevry/mdx/source/index.ts</code> is typescript source code with import for modules</li>
-<li><code>@bevry/mdx</code> aliases <code>@bevry/mdx/edition-node-12/index.js</code></li>
-<li><code>@bevry/mdx/edition-node-12/index.js</code> is typescript compiled for node.js 12 with require for modules</li></ul>
-
-<!-- /INSTALL -->
-
-
 ## Usage
+
+[Complete API Documentation.](http://master.mdx.bevry.surge.sh/docs/globals.html)
 
 Create a `next.config.js` file with the following:
 
@@ -63,10 +44,10 @@ const { withMDX } = require('@bevry/mdx')
 module.exports = withMDX(
     {
         pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
-        target: 'serverless'
+        target: 'serverless',
     },
     {
-        extension: /\.mdx?$/
+        extension: /\.mdx?$/,
     }
 )
 ```
@@ -74,6 +55,28 @@ module.exports = withMDX(
 Put your layouts in the `layouts` directory. The layout should accept a `meta` property with the metadata from the page.
 
 [docmatter](http://github.com/bevry/docmatter) is used to parse the document headers.
+
+<!-- INSTALL/ -->
+
+<h2>Install</h2>
+
+<a href="https://npmjs.com" title="npm is a package manager for javascript"><h3>npm</h3></a>
+<ul>
+<li>Install: <code>npm install --save @bevry/mdx</code></li>
+<li>Import: <code>import pkg from ('@bevry/mdx')</code></li>
+<li>Require: <code>const pkg = require('@bevry/mdx').default</code></li>
+</ul>
+
+<h3><a href="https://editions.bevry.me" title="Editions are the best way to produce and consume packages you care about.">Editions</a></h3>
+
+<p>This package is published with the following editions:</p>
+
+<ul><li><code>@bevry/mdx/source/index.ts</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> source code with <a href="https://babeljs.io/docs/learn-es2015/#modules" title="ECMAScript Modules">Import</a> for modules</li>
+<li><code>@bevry/mdx</code> aliases <code>@bevry/mdx/edition-esnext/index.js</code></li>
+<li><code>@bevry/mdx/edition-esnext/index.js</code> is <a href="https://www.typescriptlang.org/" title="TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. ">TypeScript</a> compiled against <a href="https://en.wikipedia.org/wiki/ECMAScript#ES.Next" title="ECMAScript Next">ESNext</a> for <a href="https://nodejs.org" title="Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine">Node.js</a> with <a href="https://nodejs.org/dist/latest-v5.x/docs/api/modules.html" title="Node/CJS Modules">Require</a> for modules</li></ul>
+
+<!-- /INSTALL -->
+
 
 <!-- HISTORY/ -->
 
@@ -121,7 +124,7 @@ No sponsors yet! Will you be the first?
 
 These amazing people have contributed code to this project:
 
-<ul><li><a href="http://balupton.com">Benjamin Lupton</a> — <a href="https://github.com/bevry/mdx/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/mdx">view contributions</a></li></ul>
+<ul><li><a href="https://github.com/balupton">Benjamin Lupton</a> — <a href="https://github.com/bevry/mdx/commits?author=balupton" title="View the GitHub contributions of Benjamin Lupton on repository bevry/mdx">view contributions</a></li></ul>
 
 <a href="https://github.com/bevry/mdx/blob/master/CONTRIBUTING.md#files">Discover how you can contribute by heading on over to the <code>CONTRIBUTING.md</code> file.</a>
 
