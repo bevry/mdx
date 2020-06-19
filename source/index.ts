@@ -1,4 +1,4 @@
-import pathUtil from 'path'
+import * as pathUtil from 'path'
 import docmatter from 'docmatter'
 
 export function parseMDX(src: string) {
