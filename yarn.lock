@@ -533,10 +533,10 @@ diff@^4.0.2:
   resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
   integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
 
-docmatter@3.6.0:
-  version "3.6.0"
-  resolved "https://registry.yarnpkg.com/docmatter/-/docmatter-3.6.0.tgz#82d5ef98c079df6d2ad8309dd461bce5195d7009"
-  integrity sha512-Ev526gE3X6y4paY7l6TMp71/18H1jDWPXJFwa2UCNKydxZRC5Y1NikgZw3YoFCf08WSRlB49w9Ovf+fexGz3zg==
+docmatter@3.10.0:
+  version "3.10.0"
+  resolved "https://registry.yarnpkg.com/docmatter/-/docmatter-3.10.0.tgz#ed7c3927a45cf30b22148f0d440ab7013530e9fd"
+  integrity sha512-EIvN1Qg/2jJyq2Jz8h78CaNb8nSieNu7OPbYN+gb/IGhJ5QEmCiOj73kvvZF1/0PtLNhnJbA+2UYfJnW89d5vg==
 
 doctrine@^3.0.0:
   version "3.0.0"
