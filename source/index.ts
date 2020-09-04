@@ -1,6 +1,10 @@
 import * as pathUtil from 'path'
 import docmatter from 'docmatter'
 
+import filedirname from 'filedirname'
+const [file, dir] = filedirname()
+const root = pathUtil.join(dir, '..')
+
 export function parseMDX(src: string) {
 	const { content, body, header } = docmatter(src)
 	const meta = header ? JSON.parse(header) : {}
@@ -42,7 +46,7 @@ export function withMDX(
 						loader: '@mdx-js/loader',
 						options: pluginOptions.options,
 					},
-					pathUtil.join(__dirname, '..', 'loader'),
+					pathUtil.join(root, 'loader'),
 				],
 			})
 

@@ -116,7 +116,8 @@
     }
   },
   "dependencies": {
-    "docmatter": "^3.17.0"
+    "docmatter": "^3.17.0",
+    "filedirname": "^2.2.0"
   },
   "devDependencies": {
     "@bevry/update-contributors": "^1.15.0",
