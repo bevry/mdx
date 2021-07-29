@@ -35,7 +35,7 @@ MDX loader for Next.js
 
 ## Usage
 
-[Complete API Documentation.](http://master.mdx.bevry.surge.sh/docs/globals.html)
+[Complete API Documentation.](http://master.mdx.bevry.surge.sh/docs/)
 
 Create a `next.config.js` file with the following:
 
