@@ -27,14 +27,14 @@ interface PluginOptions {
 }
 export function withMDX(
 	nextConfig: NextConfig = {},
-	pluginOptions: PluginOptions = {}
+	pluginOptions: PluginOptions = {},
 ) {
 	const extension = pluginOptions.extension || /\.mdx$/
 	return Object.assign({}, nextConfig, {
 		webpack(config: any, options: any) {
 			if (!options.defaultLoaders) {
 				throw new Error(
-					'This plugin is not compatible with Next.js versions below 5.0.0 https://err.sh/next-plugins/upgrade'
+					'This plugin is not compatible with Next.js versions below 5.0.0 https://err.sh/next-plugins/upgrade',
 				)
 			}
 
