@@ -11,8 +11,8 @@ export function parseMDX(src: string) {
 	meta.tags = Array.isArray(meta.tags)
 		? meta.tags
 		: meta.tags
-		  ? meta.tags.split(/\s*,\s*/)
-		  : []
+			? meta.tags.split(/\s*,\s*/)
+			: []
 	if (meta.date) meta.date = new Date(meta.date)
 	return { meta, body: body || content, header }
 }
